@@ -2,9 +2,12 @@ import psycopg2
 import numpy as np
 import re
 
+#def getConnection():
+#    # return psycopg2.connect("dbname='dbname' user='user' host='host' password='password' port='port'")
+#    raise NotImplementedError
+
 def getConnection():
-    # return psycopg2.connect("dbname='dbname' user='user' host='host' password='password' port='port'")
-    raise NotImplementedError
+    return psycopg2.connect("dbname='mimic' user='postgres' password='postgres'")
 
 def parseUnitsMap(filename='config/unitsmap.unit'):
     with open(filename, 'r') as f:
